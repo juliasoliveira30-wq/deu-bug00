@@ -1,0 +1,245 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #0a0f1c;
+  color: white;
+}
+
+/* HEADER */
+.header {
+  background: #111827;
+  border-bottom: 2px solid #00c3ff;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding: 15px;
+}
+
+.logo {
+  width: 120px; /* aumentado */
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+
+.logo-header {
+  width: 240px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.logo-header:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+
+/* MENU */
+nav {
+  background-color: #111827;
+  border-bottom: 2px solid #00c3ff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+}
+
+.nav-brand {
+  color: #00c3ff;
+  font-weight: bold;
+  font-size: 18px;
+  letter-spacing: 1px;
+  text-shadow: 0 0 10px rgba(0, 195, 255, 0.5);
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 40px;
+  padding: 15px;
+  margin: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #00c3ff;
+  font-weight: bold;
+  transition: 0.3s;
+  font-size: 16px;
+}
+
+nav a:hover {
+  color: #ff6b6b;
+  text-shadow: 0 0 10px #00c3ff;
+}
+
+/* LOGO INICIAL */
+/* LOGO INICIAL */
+#hero {
+  background: linear-gradient(135deg, rgba(10, 15, 28, 0.7) 0%, rgba(15, 39, 68, 0.8) 100%), url('./plano%20de%20fundo.jpg') center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 20px;
+  min-height: 400px;
+  position: relative;
+  overflow: hidden;
+}
+
+#hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 20% 50%, rgba(0, 195, 255, 0.1) 0%, transparent 50%),
+              radial-gradient(circle at 80% 80%, rgba(0, 195, 255, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.logo-inicial {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0;
+  position: relative;
+  z-index: 1;
+}
+
+/* LOGO CARD */
+.logo-card {
+  background: linear-gradient(135deg, #1e3a5f 0%, #0f2744 100%);
+  border: 2px solid #00c3ff;
+  padding: 25px;
+  border-radius: 12px;
+  max-width: 600px;
+  margin: 20px auto;
+  box-shadow: 0 0 20px rgba(0, 195, 255, 0.2);
+  transition: 0.3s;
+}
+
+.logo-card:hover {
+  border-color: #ff6b6b;
+  box-shadow: 0 0 30px rgba(0, 195, 255, 0.3);
+}
+
+.logo-card p {
+  font-size: 15px;
+  color: #e0e7ff;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* SECTIONS */
+section {
+  padding: 40px;
+  text-align: center;
+}
+
+/* CARDS */
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.card {
+  background: #111827;
+  border: 1px solid #00c3ff;
+  padding: 20px;
+  border-radius: 12px;
+  width: 180px; /* menor */
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  border-color: red;
+}
+
+/* IMAGENS DOS CARDS */
+.card img {
+  width: 80px;       /* menor */
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%; /* estilo avatar */
+  margin-top: 10px;
+  border: 2px solid #00c3ff;
+}
+
+/* TEXTO */
+.card h3 {
+  margin: 10px 0 5px;
+  font-size: 16px;
+}
+
+.card p {
+  font-size: 13px;
+  color: #ccc;
+}
+
+/* LOGO SECTION */
+.logo-section {
+  width: 150px;
+}
+
+/* FOOTER */
+footer {
+  background: linear-gradient(135deg, #0f1419 0%, #1a1f2e 100%);
+  border-top: 3px solid #00c3ff;
+  padding: 40px 20px;
+  text-align: center;
+  margin-top: 60px;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-logo {
+  width: 90px;
+  filter: drop-shadow(0 0 20px #00c3ff);
+  animation: float 3s ease-in-out infinite;
+  transition: 0.3s;
+}
+
+.footer-logo:hover {
+  filter: drop-shadow(0 0 30px #ff6b6b);
+  transform: scale(1.15);
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+.footer-info h3 {
+  margin: 0;
+  color: #00c3ff;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+.footer-info p {
+  margin: 5px 0 0;
+  color: #888;
+  font-size: 14px;
+}
